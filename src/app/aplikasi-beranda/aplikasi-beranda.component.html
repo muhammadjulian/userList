@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+  <p class="search">
+    <mat-form-field appearance="legacy">
+      <mat-label>Search.....</mat-label>
+      <input matInput name="search" placeholder="by name or by email" [(ngModel)]="searchText">
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </p>
+
+    <mat-grid-list cols="3" rowHeight="2:1">
+      <ng-container *ngFor="let item of dataSource | filter:searchText" >
+      <mat-grid-tile>
+        
+        <mat-card class="example-card">
+          <mat-card-title-group>
+          <img class="avatar" src="{{item.avatar}}" alt="{{item.avatar}}">
+        </mat-card-title-group>
+          <mat-card-content class="content">
+            {{item.first_name}}{{' '}}{{item.last_name}}
+          </mat-card-content>
+          <mat-card-content class="content">
+            {{item.email}}
+          </mat-card-content>
+        </mat-card>
+
+      </mat-grid-tile>
+    </ng-container>
+    </mat-grid-list>
+  </div>
+</div>
