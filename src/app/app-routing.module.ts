@@ -4,6 +4,7 @@ import { AplikasiBerandaComponent } from './aplikasi-beranda/aplikasi-beranda.co
 
 const routes: Routes = [
   { path: '**', component: AplikasiBerandaComponent },
+  { path: 'aplikasi-beranda-component', component: AplikasiBerandaComponent }
 ];
 
 @NgModule({
