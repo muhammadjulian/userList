@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AplikasiBerandaComponent } from './aplikasi-beranda/aplikasi-beranda.component';
 
 const routes: Routes = [
-  { path: '', component: AplikasiBerandaComponent },
+  { path: '**', component: AplikasiBerandaComponent },
 ];
 
 @NgModule({
